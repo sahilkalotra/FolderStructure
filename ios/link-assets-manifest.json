@@ -1,0 +1,77 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/Aleo-Black.ttf",
+      "sha1": "ed95686a31c13db4145107550c09ab4fcd353d93"
+    },
+    {
+      "path": "src/assets/fonts/Aleo-BlackItalic.ttf",
+      "sha1": "40a1dbfa53ed79c183c1d6afd368c9ada0196ed2"
+    },
+    {
+      "path": "src/assets/fonts/Aleo-Bold.ttf",
+      "sha1": "073e01012aad6d62ff738e26946db6aa726bb53d"
+    },
+    {
+      "path": "src/assets/fonts/Aleo-BoldItalic.ttf",
+      "sha1": "8bdc1b7b2d5eefc38b1eda7aec325c7b2899eba5"
+    },
+    {
+      "path": "src/assets/fonts/Aleo-ExtraBold.ttf",
+      "sha1": "2d34e89e5ff20f174e27af5f765476be28035a83"
+    },
+    {
+      "path": "src/assets/fonts/Aleo-ExtraBoldItalic.ttf",
+      "sha1": "cd56840b7b611068ee7642446bf83c5809835513"
+    },
+    {
+      "path": "src/assets/fonts/Aleo-ExtraLight.ttf",
+      "sha1": "29fae8f5e3852f12e1ec5b1751f861919de275e3"
+    },
+    {
+      "path": "src/assets/fonts/Aleo-ExtraLightItalic.ttf",
+      "sha1": "e691461ae9863bb34cbe967e0863a1df78035b93"
+    },
+    {
+      "path": "src/assets/fonts/Aleo-Italic.ttf",
+      "sha1": "a4101abc032db70d00550eac52a0a31316af4443"
+    },
+    {
+      "path": "src/assets/fonts/Aleo-Light.ttf",
+      "sha1": "af0c7d01f1ba3e8570d05e5b8ef5372ff400a131"
+    },
+    {
+      "path": "src/assets/fonts/Aleo-LightItalic.ttf",
+      "sha1": "9b2b6d9df61f931540e5651b89df63c99b71f7b8"
+    },
+    {
+      "path": "src/assets/fonts/Aleo-Medium.ttf",
+      "sha1": "24b52041db41ab76779f318bc3a3b0ec866e37ea"
+    },
+    {
+      "path": "src/assets/fonts/Aleo-MediumItalic.ttf",
+      "sha1": "9ab56a36f6ab3b955cae8ddfbc8f568587824f2b"
+    },
+    {
+      "path": "src/assets/fonts/Aleo-Regular.ttf",
+      "sha1": "597f20b863e393f6094fc93838cc89df4ba63b87"
+    },
+    {
+      "path": "src/assets/fonts/Aleo-SemiBold.ttf",
+      "sha1": "e6e4b01712bf86cb719875f5589df3986dceb905"
+    },
+    {
+      "path": "src/assets/fonts/Aleo-SemiBoldItalic.ttf",
+      "sha1": "b543c54d07d0ea644ab89d7933c3fd44ed403629"
+    },
+    {
+      "path": "src/assets/fonts/Aleo-Thin.ttf",
+      "sha1": "4597550c4a1ef4202822cd409a1697c048f582b9"
+    },
+    {
+      "path": "src/assets/fonts/Aleo-ThinItalic.ttf",
+      "sha1": "6b6d4ff65a0046426d303bb2bca942cc6e06b9cb"
+    }
+  ]
+}

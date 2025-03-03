@@ -1,0 +1,160 @@
+diff --git a/node_modules/react-native-dots-pagination/index.js b/node_modules/react-native-dots-pagination/index.js
+index 37cba27..5b2c772 100644
+--- a/node_modules/react-native-dots-pagination/index.js
++++ b/node_modules/react-native-dots-pagination/index.js
+@@ -1,6 +1,8 @@
++
+ import React, { Component } from 'react';
+ import { View, ScrollView, Platform } from 'react-native';
+ import PropTypes from 'prop-types';
++import LinearGradient from 'react-native-linear-gradient';
+ 
+ // Styles
+ import { Styles } from './styles';
+@@ -10,6 +12,7 @@ const scalesPageToFit = Platform.OS === 'android';
+ 
+ const DEFAULT_PASSIVE_DOT_WIDTH = 10;
+ const DEFAULT_ACTIVE_DOT_WIDTH = 10;
++const DEFAULT_ACTIVE_GRADIENT_COLOR = ['#FDD3CD', '#FEB8E8']
+ 
+ export default class Dots extends Component {
+   static get propTypes() {
+@@ -28,6 +31,7 @@ export default class Dots extends Component {
+       passiveDotHeight: PropTypes.number,
+       passiveColor: PropTypes.string,
+       activeColor: PropTypes.string,
++      gradientColor:PropTypes.array,
+ 
+       // active Border
+       activeBorder: PropTypes.bool,
+@@ -56,6 +60,7 @@ export default class Dots extends Component {
+     passiveDotHeight: DEFAULT_PASSIVE_DOT_WIDTH,
+     passiveColor: '#CCCCCC',
+     activeColor: '#016bd8',
++    gradientColor:DEFAULT_ACTIVE_GRADIENT_COLOR,
+ 
+     activeBorder: false,
+     activeBorderWidth: 3,
+@@ -103,16 +108,18 @@ export default class Dots extends Component {
+       passiveDotWidth,
+       activeDotHeight,
+       passiveDotHeight,
+-      activeColor,
+       passiveColor,
++      activeColor,
+       activeBorder,
+       activeBorderWidth,
+       activeBorderColor,
+       marginHorizontal,
+       alignDotsOnXAxis,
+     } = this.props;
++
++    const borderRadius = isActive ? 20 : 100;
++
+     const width = isActive ? activeDotWidth : passiveDotWidth;
+-    const marginTop = alignDotsOnXAxis || !isActive ? 0 : -width / 6;
+ 
+     let height = width;
+ 
+@@ -126,9 +133,7 @@ export default class Dots extends Component {
+       width,
+       height,
+       marginHorizontal,
+-      backgroundColor: isActive ? activeColor : passiveColor,
+-      borderRadius: width,
+-      marginTop,
++      borderRadius
+     };
+ 
+     // active Border Styles.
+@@ -137,6 +142,13 @@ export default class Dots extends Component {
+       style.borderColor = activeBorderColor;
+     }
+ 
++    if (isActive) {
++      // No LinearGradient for now, just a solid color for testing
++      style.backgroundColor = activeColor;
++    } else {
++      style.backgroundColor = passiveColor;
++    }
++
+     return style;
+   }
+ 
+@@ -152,7 +164,9 @@ export default class Dots extends Component {
+       marginHorizontal,
+       accessible,
+       accessibilityLabel,
++      gradientColor
+     } = this.props;
++
+     const list = [...Array(length).keys()];
+     const activeWidth =
+       activeBorderWidth * 4 + activeDotWidth + paddingHorizontal;
+@@ -161,13 +175,16 @@ export default class Dots extends Component {
+       (list.length - 1) * passiveDotWidth +
+       marginHorizontal * (list.length * 2);
+ 
++    // Ensure the ScrollView has enough width to display all dots
++    const finalWidth = width < scrollWidth ? scrollWidth : width;
++
+     return (
+       <View style={Styles.container} accessible={accessible} accessibilityLabel={accessibilityLabel}>
+         <ScrollView
+           ref={(el) => {
+             this.scrollRef = el;
+           }}
+-          style={{ width: width < scrollWidth ? width : scrollWidth }}
++          style={{ maxWidth: finalWidth }}
+           contentContainerStyle={{
+             alignItems: 'center',
+             paddingVertical,
+@@ -180,20 +197,22 @@ export default class Dots extends Component {
+           showsHorizontalScrollIndicator={false}
+         >
+           {list.map((i) => {
+-            return (
+-              <View
+-                key={i}
+-                style={this.dotStyle(this.isActive(i))}
+-                onLayout={({
+-                  nativeEvent: {
+-                    layout: { x, y },
+-                  },
+-                }) => {
+-                  this[`dots_${i}`] = { x, y };
+-                }}
+-              />
+-            );
++            // Check if the dot is active
++            if (this.isActive(i)) {
++              // If active, render a LinearGradient for the active dot
++              return (
++                <LinearGradient key={i} colors={gradientColor}
++                  style={this.dotStyle(true)} start={{x:0,y:0}} end={{x:1,y:0}}/>
++              );
++            } else {
++              // If not active, render a regular View for the inactive dot
++              return (
++                <View key={i} style={this.dotStyle(false)} // Pass 'false' for inactive dot style
++                  onLayout={({nativeEvent: {layout: { x, y }}}) => {this[`dots_${i}`] = { x, y }}}/>
++              );
++            }
+           })}
++
+         </ScrollView>
+       </View>
+     );
+diff --git a/node_modules/react-native-dots-pagination/styles.js b/node_modules/react-native-dots-pagination/styles.js
+index 299343b..3fb7355 100644
+--- a/node_modules/react-native-dots-pagination/styles.js
++++ b/node_modules/react-native-dots-pagination/styles.js
+@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
+ export const Styles = StyleSheet.create({
+   container: {
+     justifyContent: 'center', 
+-    alignItems: 'center'
++    alignItems: 'center',
+   },
+ 
+   passive: { },
