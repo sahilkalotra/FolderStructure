@@ -9,7 +9,7 @@ import Label from '../label';
 
 const CustomModal: React.FC<CustomModalProps> = ({ onClose, title, message = '', buttonText = '' }) => {
     return (
-        <Modal visible={true} animationType="fade" transparent={false} backdropColor={colors.black2}>
+        <Modal visible={true} transparent={false} backdropColor={colors.black2}>
             <View style={styles.modal}>
                 <View style={styles.modalContainer}>
                     <Image source={assets.pswdSuccess} style={styles.imgStyle} resizeMode="contain" />

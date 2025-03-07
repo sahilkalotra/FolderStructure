@@ -6,7 +6,7 @@ export default StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'center',
       borderRadius: 25,  
-      overflow:'hidden',
+      // overflow:'hidden',
       height:45
     },
   });

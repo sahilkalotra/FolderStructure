@@ -12,5 +12,8 @@ export default {
     "opaqueWhite60":"rgba(255, 255, 255, 0.6)",
     "black2":"rgba(255, 255, 255, 0.2)",
     "dullBlack":"#121212",
-    "lightGray":"#AAAAAA"
+    "lightGray":"#AAAAAA",
+
+    //dark
+    red:"red"
 }

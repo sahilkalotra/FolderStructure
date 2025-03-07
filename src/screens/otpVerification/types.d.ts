@@ -1,0 +1,1 @@
+type OtpVerificationProps = CompositeScreenProps<NativeStackScreenProps<AuthStackParams, "otpVerification">, NativeStackScreenProps<RootStackParams>>

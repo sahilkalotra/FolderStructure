@@ -13,14 +13,37 @@ import colors from '../../utils/colors'
 import local from '../../utils/local'
 import assets from '../../assets'
 import styles from './styles'
+import { validationRules } from '../../utils/helper'
+import Validate from '../../utils/validate'
+import { useAppDispatch } from '../../hooks/reduxHook'
+import { resetPasswordThunk } from '../../redux/thunk/authThunk'
+import { showErrorToast, showSuccessToast } from '../../components/toast'
 
-const CreatePassword = () => {
+const CreatePassword = ({ route }:any) => {
+  const { email  } = route?.params || {};
   const navigation = useNavigation()
-  const [email, setEmail] = useState<string>('');
+  const dispatch = useAppDispatch()
+
+  const [password, setPassword] = useState<string>('');
+  const [confirmPassword, setConfirmPassword] = useState<string>('');
   const [modalVisible, setModalVisible] = useState(false);
 
+  const [errorState, setErrorState] = useState<{ [key: string]: boolean }>({});
+
+  // Define dynamic validation rules for this screen
+  const formValidationRules = { confirmPassword: validationRules.confirmPassword, password: validationRules.password };
+  const { handleValidation, isTouched } = Validate({
+    values: { password , confirmPassword }, rules: formValidationRules, setErrorState: setErrorState
+  });
+
   const openModal = () => {
-    setModalVisible(true);
+    if(handleValidation()){
+      dispatch(resetPasswordThunk({email,password})).then((response)=>{
+        if(response?.payload?.status==200){setModalVisible(true); return} 
+        showErrorToast({ title: local.OOPS, message: response?.payload?.message })
+        
+      })
+    }
   };
 
   const closeModal = () => {
@@ -40,8 +63,10 @@ const CreatePassword = () => {
           <Label text={local.CREATE_PASSWORD_TEXT} style={styles.suHeading} fontSize={15} />
 
           <View style={styles.input}>
-            <Input onChange={setEmail} value={email} placeHolder={local.ENTER_NEW_PASSWORD} />
-            <Input onChange={setEmail} value={email} placeHolder={local.CONFIRM_NEW_PASSWORD} />
+            <Input onChange={setPassword} secure leftIcon value={password} placeHolder={local.ENTER_NEW_PASSWORD}
+             style={errorState.password || (isTouched.password && !password) ? commonStyle.error : {}} />
+            <Input onChange={setConfirmPassword} secure leftIcon value={confirmPassword} placeHolder={local.CONFIRM_NEW_PASSWORD} 
+             style={errorState.confirmPassword || (isTouched.confirmPassword && !confirmPassword) ? commonStyle.error : {}}/>
           </View>
 
           <GradientButton onPress={openModal} style={styles.gradientBtn}>

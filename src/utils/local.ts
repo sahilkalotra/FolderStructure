@@ -1,4 +1,20 @@
 export default {
+    //Errors
+    sessionExpired: "Session Expired",
+    UNAUTHORIZE:"Unauthorize",
+    requestTimedOut: "Request Timed Out",
+    timeoutError: "The connection timed out. Please ensure you're connected to the internet and try again.",
+    looksLikeYourSessionHasExpiredNoWorriesJustLogBackIn: "Looks like your session has expired. No worries, just log back in.",
+    serverError: "Looks like our server is having a little hiccup. We're on it!",
+    userNameNotAvailable:"This username is not available, Try a suggested username, Or enter a new one",
+
+    // Api responses
+    emailSent: "Email Sent!",
+    checkYourEmailYourOtpIsOnItsWay: "Check your email! Your OTP is on its way.",
+    verified: "Verified!",
+    OOPS:"Oops!!",
+
+    //Main Strings
     SKIP:'Skip',
     NEXT:'Next',
     SIGN_IN_TO_YOUR_ACCOUNT:'Sign in to your Account',
@@ -27,6 +43,21 @@ export default {
     BACK_TO_SIGNIN:"Back to Signin",
     PASSWORD_CHANGED:"Password Changed",
     CONFIRM_YOUR_ACCOUNT:"Confirm your Account",
-    CONFIRM_YOUR_ACCOUNT_TEXT:"Enter the code we’ve sent via email to"
-
+    CONFIRM_YOUR_ACCOUNT_TEXT:"Enter the code we’ve sent via email to",
+    DIDNT_GET_CODE:"Didn’t get the code ? ",
+    RESEND_OTP:"Resend again",
+    CREATE_PROFILE:"Create your Profile",
+    UPLOAD_YOUR_PROFILE_PHOTO:"Upload your profile photo",
+    UPLOAD_YOUR_COVER_PHOTO:"Upload your cover photo",
+    USERNAME:"Enter Your Username",
+    BIO:"Bio",
+    GENDER:"Gender",
+    EDUCATION:"Education",
+    LOCATION:"Location",
+    PROFILE_CREATED:"Profile Created",
+    PROFILE_CREATED_TEXT:"“Congratulations, you’ve successfully created your profile.",
+    GET_STARTED: "Get started",
+    ACCEPT_AND_CONTINUE: "Accept and Continue",
+    PRIVACY_POLICY:"Privacy Policy",
+    TERMS_AND_CONDITION:"Terms of Service",
 }

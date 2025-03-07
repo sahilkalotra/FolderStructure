@@ -6,4 +6,5 @@ export default StyleSheet.create({
         ...commonStyle.container,
         height: StatusBar.currentHeight
     },
+    contentContainer : { flex:1 , paddingTop: StatusBar.currentHeight }
 })

@@ -6,7 +6,9 @@ import { useAppSelector } from "../hooks/reduxHook";
 import { RootStackParamList } from "../utils";
 import MainStack from "./routes/MainStack";
 import AuthStack from "./routes/AuthStack";
-import { Alert } from "react-native";
+import { ActivityIndicator, View } from "react-native";
+import colors from "../utils/colors";
+import { deviceHeight, deviceWidth } from "../utils/helper";
 
 export const navigationRef = React.createRef<any>();
 const routeNameRef: any = React.createRef();
@@ -14,12 +16,7 @@ const routeNameRef: any = React.createRef();
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const AppContainer: React.FC = () => {
-  const isLoggedIn = false
-  const { isFirstTime } = useAppSelector(state => state.auth)
-
-  useEffect(() => {
-    // verify is logged in here or not
-  }, [])
+  const { isFirstTime, isLoggedIn, loader } = useAppSelector(state => state.auth)
 
   const onReady = () => routeNameRef.current = navigationRef.current.getCurrentRoute().name
   const onStateChange = () => {
@@ -29,13 +26,20 @@ const AppContainer: React.FC = () => {
   if (isFirstTime) { return <OnBoardingScreen /> }
 
   return (
-      <NavigationContainer ref={navigationRef} onReady={onReady} onStateChange={onStateChange}>
-        <Stack.Navigator>
-          {isLoggedIn
-            ? <Stack.Screen name="MainStack" component={MainStack} options={{ headerShown: false }} />
-            : <Stack.Screen name="AuthStack" component={AuthStack} options={{ headerShown: false }} />}
-        </Stack.Navigator>
-      </NavigationContainer>
+    <NavigationContainer ref={navigationRef} onReady={onReady} onStateChange={onStateChange}>
+      <Stack.Navigator>
+        {isLoggedIn
+          ? <Stack.Screen name="MainStack" component={MainStack} options={{ headerShown: false }} />
+          : <Stack.Screen name="AuthStack" component={AuthStack} options={{ headerShown: false }} />}
+      </Stack.Navigator>
+      {
+        loader &&
+        <View style={{ position: 'absolute', height: deviceHeight, width: deviceWidth, alignItems: 'center', justifyContent: 'center', backgroundColor: colors.black2 }}>
+          <ActivityIndicator color={"#fff"} size={'large'} />
+        </View>
+      }
+
+    </NavigationContainer>
   );
 };
 

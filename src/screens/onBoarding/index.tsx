@@ -55,7 +55,7 @@ const OnboardingItem = React.memo(({ item, scrollX, index }: OnboardingItemProps
 
   return (
     <ImageBackground source={item.image} style={styles.imageBackground}
-      imageStyle={{ resizeMode: "contain" }}>
+      imageStyle={{  }}>
       <View style={styles.backGroundImageView}>
         <AnimatedLabel text={item.heading1}
           style={[styles.heading, { transform: [{ translateX: translateXHeading }] }]} />
@@ -76,11 +76,12 @@ const OnBoardingScreen = () => {
   const handleNextPress = useCallback(() => {
     setCurrentIndex((prevIndex) => {
       if (prevIndex != data?.length - 1) {
-        const nextIndex = Math.min(prevIndex + 1, data.length - 1);
+        const nextIndex = prevIndex + 1
         flatListRef.current?.scrollToIndex({
           index: nextIndex,
           animated: true,
         });
+        console.log(nextIndex,"<====>", data?.length)
         return nextIndex;
       }
       dispatch(setFirstTime(false))
@@ -88,16 +89,17 @@ const OnBoardingScreen = () => {
     });
   }, []);
 
-  const handleMomentumScrollEnd = (event: any) => {
-    const newIndex = Math.floor(event.nativeEvent.contentOffset.x / deviceWidth);
+  const handleMomentumScrollEnd = useCallback((event: any) => {
+    const newIndex = Math.floor(event.nativeEvent.contentOffset.x / event.nativeEvent.layoutMeasurement.width);
     setCurrentIndex(newIndex);
-  };
+  },[])
 
   const onScroll = (event: any) => {
     Animated.event(
       [{ nativeEvent: { contentOffset: { x: scrollX } } }],
       { useNativeDriver: false }
     )(event)
+
   }
   return (
     <View style={styles.container}>
@@ -108,7 +110,7 @@ const OnBoardingScreen = () => {
           <OnboardingItem item={item} scrollX={scrollX} index={index} />
         )}
         horizontal pagingEnabled showsHorizontalScrollIndicator={false}
-        onScroll={onScroll} scrollEventThrottle={16}
+        onScroll={onScroll} scrollEventThrottle={16} 
         decelerationRate="normal" onMomentumScrollEnd={handleMomentumScrollEnd}
       />
       <View style={[styles.container1]}>

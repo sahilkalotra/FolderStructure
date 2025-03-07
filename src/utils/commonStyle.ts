@@ -1,8 +1,16 @@
 import { StyleSheet } from "react-native";
+import colors from "./colors";
 
 export default StyleSheet.create({
     container: {
         flex: 1,
+    },
+    border:{
+        borderWidth:1, borderColor:colors.white
+    },
+    gap:{ gap: 15 },
+    row:{
+        flexDirection: "row",
     },
     flexRow: {
         flexDirection: "row",
@@ -31,4 +39,5 @@ export default StyleSheet.create({
         flexDirection: "row",
         alignItems: "center",
     },
+    error : { borderColor: colors.red, borderWidth: 1 }
 });

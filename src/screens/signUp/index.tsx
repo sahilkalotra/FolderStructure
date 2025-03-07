@@ -11,13 +11,41 @@ import local from '../../utils/local'
 import assets from '../../assets'
 import styles from './styles'
 import { useNavigation } from '../../hooks/navigationHook'
+import { validationRules } from '../../utils/helper'
+import Validate from '../../utils/validate'
+import { useAppDispatch } from '../../hooks/reduxHook'
+import { signUpThunk } from '../../redux/thunk/authThunk'
+import { showErrorToast, showSuccessToast } from '../../components/toast'
+import { resetState } from '../../redux/slice/userSlice'
 
 const SignUp = () => {
   const navigation = useNavigation()
+  const dispatch = useAppDispatch()
+  
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
+  const [errorState, setErrorState] = useState<{ [key: string]: boolean }>({});
+
+  // Define dynamic validation rules for this screen
+  const formValidationRules = { email: validationRules.email, password: validationRules.password };
+  const { handleValidation, isTouched } = Validate({
+    values: { email, password }, rules: formValidationRules, setErrorState: setErrorState
+  });
 
   const signIn = () => navigation.navigate('SignIn')
+
+  const continuePress = () => {
+    if (handleValidation()) {
+      const payload = { email, password }
+      dispatch(signUpThunk(payload)).then((response)=>{
+        if(response?.payload?.status!==201) return showErrorToast({ title: "Oops !!", message: response?.payload?.message })
+        showSuccessToast({ title: local.emailSent, message: local.checkYourEmailYourOtpIsOnItsWay })
+        dispatch(resetState())
+        navigation.navigate('otpVerification', { type: 'signUp', email });
+      })
+    }
+  }
+  
   return (
     <SafeArea backgroundColor={colors.black} barStyle="light-content">
       <KeyboardAwareScrollView keyboardShouldPersistTaps="handled" bounces contentContainerStyle={{ flexGrow: 1 }}>
@@ -27,12 +55,13 @@ const SignUp = () => {
             <Label text={local.CREATE_YOUR_ACCOUNT} style={styles.heading} fontSize={25} />
           </View>
           <View style={styles.input}>
-            <Input onChange={setEmail} value={email} placeHolder={local.ENTER_YOUR_EMAIL_ADDRESS} />
-            <Input onChange={setPassword} value={password} placeHolder={local.ENTER_YOUR_PASSWORD} leftIcon />
-
+          <Input onChange={setEmail} value={email} placeHolder={local.ENTER_YOUR_EMAIL_ADDRESS}
+              style={errorState.email || (isTouched.email && !email) ? commonStyle.error : {}} />
+            <Input onChange={setPassword} value={password} placeHolder={local.ENTER_YOUR_PASSWORD} leftIcon secure
+              style={errorState.password || (isTouched.password && !password) ? commonStyle.error : {}} />
           </View>
 
-          <GradientButton onPress={() => { }} style={styles.gradientBtn}>
+          <GradientButton onPress={continuePress} style={styles.gradientBtn}>
             <Label text={local.CONTINUE} style={styles.continue} fontSize={16} />
           </GradientButton>
 

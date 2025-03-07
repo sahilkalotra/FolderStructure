@@ -14,7 +14,7 @@ const SafeArea: React.FC<SafeAreaProps> = ({ isSafe = true, children, background
                     <StatusBar translucent backgroundColor={colors.black} barStyle={barStyle || "dark-content"} />
                     {children}
                 </SafeAreaView>
-                : <View style={commonStyle.container}>
+                : <View style={styles.contentContainer}>
                     <StatusBar translucent backgroundColor={colors.black} barStyle={barStyle || "dark-content"} />
                     {children}
                 </View>

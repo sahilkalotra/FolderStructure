@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		038AC181B0A243DFAEAFB2F5 /* Aleo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77722B6562084EF79D9114F8 /* Aleo-Regular.ttf */; };
 		0BB8E7B74F254CD9A26DF140 /* Aleo-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2FCE61896B7C4E81AAA2A7E7 /* Aleo-Black.ttf */; };
-		0C80B921A6F3F58F76C31292 /* libPods-IRL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-IRL.a */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		17BD83F7549943B499F6DF63 /* Aleo-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1C412EFC6621471DB3C3A952 /* Aleo-MediumItalic.ttf */; };
+		261A55BB286461C8846D7167 /* libPods-IRL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0CBEB609F5C780C3D298C8 /* libPods-IRL.a */; };
 		2F0B0CBEBE804B6A9C78705A /* Aleo-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90CB9731609B438EAADD832C /* Aleo-SemiBold.ttf */; };
 		333FDE3F95E747C08F32FDFB /* Aleo-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F714FE8D3156437EA54A5DB3 /* Aleo-SemiBoldItalic.ttf */; };
 		3638E4564A3A4254B5934661 /* Aleo-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A67B4214B4A457FAB95C75B /* Aleo-ExtraLight.ttf */; };
@@ -33,34 +33,34 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		00088BCAD8324C9CAF7C5F17 /* Aleo-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Aleo-ExtraBoldItalic.ttf"; path = "../src/assets/fonts/Aleo-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		00088BCAD8324C9CAF7C5F17 /* Aleo-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Aleo-ExtraBoldItalic.ttf"; path = "../src/assets/fonts/Aleo-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* IRL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IRL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = IRL/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = IRL/Info.plist; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = IRL/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		13E46B3882AD4E59AC6C83CE /* Aleo-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Aleo-BoldItalic.ttf"; path = "../src/assets/fonts/Aleo-BoldItalic.ttf"; sourceTree = "<group>"; };
-		1A67B4214B4A457FAB95C75B /* Aleo-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Aleo-ExtraLight.ttf"; path = "../src/assets/fonts/Aleo-ExtraLight.ttf"; sourceTree = "<group>"; };
-		1C412EFC6621471DB3C3A952 /* Aleo-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Aleo-MediumItalic.ttf"; path = "../src/assets/fonts/Aleo-MediumItalic.ttf"; sourceTree = "<group>"; };
-		2FCE61896B7C4E81AAA2A7E7 /* Aleo-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Aleo-Black.ttf"; path = "../src/assets/fonts/Aleo-Black.ttf"; sourceTree = "<group>"; };
-		3B4392A12AC88292D35C810B /* Pods-IRL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IRL.debug.xcconfig"; path = "Target Support Files/Pods-IRL/Pods-IRL.debug.xcconfig"; sourceTree = "<group>"; };
-		3C8803831C2D419D8383CD3F /* Aleo-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Aleo-BlackItalic.ttf"; path = "../src/assets/fonts/Aleo-BlackItalic.ttf"; sourceTree = "<group>"; };
-		41AB0E898B2D406A8101192E /* Aleo-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Aleo-ExtraBold.ttf"; path = "../src/assets/fonts/Aleo-ExtraBold.ttf"; sourceTree = "<group>"; };
-		5709B34CF0A7D63546082F79 /* Pods-IRL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IRL.release.xcconfig"; path = "Target Support Files/Pods-IRL/Pods-IRL.release.xcconfig"; sourceTree = "<group>"; };
-		5A33F4EC4FAF43E3B3647E8F /* Aleo-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Aleo-Bold.ttf"; path = "../src/assets/fonts/Aleo-Bold.ttf"; sourceTree = "<group>"; };
-		5DCACB8F33CDC322A6C60F78 /* libPods-IRL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IRL.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5DFBE16EC5894010A11CA5E9 /* Aleo-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Aleo-Italic.ttf"; path = "../src/assets/fonts/Aleo-Italic.ttf"; sourceTree = "<group>"; };
-		72BC4B861DFE4FAC89C497A6 /* Aleo-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Aleo-Light.ttf"; path = "../src/assets/fonts/Aleo-Light.ttf"; sourceTree = "<group>"; };
+		13E46B3882AD4E59AC6C83CE /* Aleo-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Aleo-BoldItalic.ttf"; path = "../src/assets/fonts/Aleo-BoldItalic.ttf"; sourceTree = "<group>"; };
+		1A67B4214B4A457FAB95C75B /* Aleo-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Aleo-ExtraLight.ttf"; path = "../src/assets/fonts/Aleo-ExtraLight.ttf"; sourceTree = "<group>"; };
+		1C412EFC6621471DB3C3A952 /* Aleo-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Aleo-MediumItalic.ttf"; path = "../src/assets/fonts/Aleo-MediumItalic.ttf"; sourceTree = "<group>"; };
+		22EF160810C8FDB195316535 /* Pods-IRL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IRL.release.xcconfig"; path = "Target Support Files/Pods-IRL/Pods-IRL.release.xcconfig"; sourceTree = "<group>"; };
+		2FCE61896B7C4E81AAA2A7E7 /* Aleo-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Aleo-Black.ttf"; path = "../src/assets/fonts/Aleo-Black.ttf"; sourceTree = "<group>"; };
+		3C8803831C2D419D8383CD3F /* Aleo-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Aleo-BlackItalic.ttf"; path = "../src/assets/fonts/Aleo-BlackItalic.ttf"; sourceTree = "<group>"; };
+		41AB0E898B2D406A8101192E /* Aleo-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Aleo-ExtraBold.ttf"; path = "../src/assets/fonts/Aleo-ExtraBold.ttf"; sourceTree = "<group>"; };
+		5A33F4EC4FAF43E3B3647E8F /* Aleo-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Aleo-Bold.ttf"; path = "../src/assets/fonts/Aleo-Bold.ttf"; sourceTree = "<group>"; };
+		5DFBE16EC5894010A11CA5E9 /* Aleo-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Aleo-Italic.ttf"; path = "../src/assets/fonts/Aleo-Italic.ttf"; sourceTree = "<group>"; };
+		72BC4B861DFE4FAC89C497A6 /* Aleo-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Aleo-Light.ttf"; path = "../src/assets/fonts/Aleo-Light.ttf"; sourceTree = "<group>"; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = IRL/AppDelegate.swift; sourceTree = "<group>"; };
-		77722B6562084EF79D9114F8 /* Aleo-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Aleo-Regular.ttf"; path = "../src/assets/fonts/Aleo-Regular.ttf"; sourceTree = "<group>"; };
+		77722B6562084EF79D9114F8 /* Aleo-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Aleo-Regular.ttf"; path = "../src/assets/fonts/Aleo-Regular.ttf"; sourceTree = "<group>"; };
+		7D0CBEB609F5C780C3D298C8 /* libPods-IRL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IRL.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		80B79EEA7F04DD41C8C8CA24 /* Pods-IRL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IRL.debug.xcconfig"; path = "Target Support Files/Pods-IRL/Pods-IRL.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = IRL/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		90CB9731609B438EAADD832C /* Aleo-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Aleo-SemiBold.ttf"; path = "../src/assets/fonts/Aleo-SemiBold.ttf"; sourceTree = "<group>"; };
-		972F00744118440996E1561A /* Aleo-ExtraLightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Aleo-ExtraLightItalic.ttf"; path = "../src/assets/fonts/Aleo-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
-		A7523DE245A2472D96DD5F8B /* Aleo-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Aleo-Thin.ttf"; path = "../src/assets/fonts/Aleo-Thin.ttf"; sourceTree = "<group>"; };
-		BD07379700CE4B99BC69968B /* Aleo-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Aleo-LightItalic.ttf"; path = "../src/assets/fonts/Aleo-LightItalic.ttf"; sourceTree = "<group>"; };
-		CD88D33AD16447BA8098F1AE /* Aleo-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Aleo-Medium.ttf"; path = "../src/assets/fonts/Aleo-Medium.ttf"; sourceTree = "<group>"; };
-		D3C81AB0C5B240A3AB565CB2 /* Aleo-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Aleo-ThinItalic.ttf"; path = "../src/assets/fonts/Aleo-ThinItalic.ttf"; sourceTree = "<group>"; };
+		90CB9731609B438EAADD832C /* Aleo-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Aleo-SemiBold.ttf"; path = "../src/assets/fonts/Aleo-SemiBold.ttf"; sourceTree = "<group>"; };
+		972F00744118440996E1561A /* Aleo-ExtraLightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Aleo-ExtraLightItalic.ttf"; path = "../src/assets/fonts/Aleo-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		A7523DE245A2472D96DD5F8B /* Aleo-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Aleo-Thin.ttf"; path = "../src/assets/fonts/Aleo-Thin.ttf"; sourceTree = "<group>"; };
+		BD07379700CE4B99BC69968B /* Aleo-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Aleo-LightItalic.ttf"; path = "../src/assets/fonts/Aleo-LightItalic.ttf"; sourceTree = "<group>"; };
+		CD88D33AD16447BA8098F1AE /* Aleo-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Aleo-Medium.ttf"; path = "../src/assets/fonts/Aleo-Medium.ttf"; sourceTree = "<group>"; };
+		D3C81AB0C5B240A3AB565CB2 /* Aleo-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Aleo-ThinItalic.ttf"; path = "../src/assets/fonts/Aleo-ThinItalic.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		F714FE8D3156437EA54A5DB3 /* Aleo-SemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Aleo-SemiBoldItalic.ttf"; path = "../src/assets/fonts/Aleo-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		F714FE8D3156437EA54A5DB3 /* Aleo-SemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Aleo-SemiBoldItalic.ttf"; path = "../src/assets/fonts/Aleo-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C80B921A6F3F58F76C31292 /* libPods-IRL.a in Frameworks */,
+				261A55BB286461C8846D7167 /* libPods-IRL.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,14 +110,13 @@
 				D3C81AB0C5B240A3AB565CB2 /* Aleo-ThinItalic.ttf */,
 			);
 			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				5DCACB8F33CDC322A6C60F78 /* libPods-IRL.a */,
+				7D0CBEB609F5C780C3D298C8 /* libPods-IRL.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -155,8 +154,8 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3B4392A12AC88292D35C810B /* Pods-IRL.debug.xcconfig */,
-				5709B34CF0A7D63546082F79 /* Pods-IRL.release.xcconfig */,
+				80B79EEA7F04DD41C8C8CA24 /* Pods-IRL.debug.xcconfig */,
+				22EF160810C8FDB195316535 /* Pods-IRL.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -168,13 +167,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "IRL" */;
 			buildPhases = (
-				C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */,
+				5954A763BB43ABEF287623D3 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
-				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
+				E7BA41CC6779FE003E287401 /* [CP] Embed Pods Frameworks */,
+				E238F5DE1BB464DABED82408 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -264,24 +263,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"$REACT_NATIVE_PATH/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"$REACT_NATIVE_PATH/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-IRL/Pods-IRL-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-IRL/Pods-IRL-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IRL/Pods-IRL-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */ = {
+		5954A763BB43ABEF287623D3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -303,7 +285,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
+		E238F5DE1BB464DABED82408 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -318,6 +300,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IRL/Pods-IRL-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7BA41CC6779FE003E287401 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IRL/Pods-IRL-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IRL/Pods-IRL-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IRL/Pods-IRL-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -336,14 +335,15 @@
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-IRL.debug.xcconfig */;
+			baseConfigurationReference = 80B79EEA7F04DD41C8C8CA24 /* Pods-IRL.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W6LB434XQB;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = IRL/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -354,7 +354,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.irl;
 				PRODUCT_NAME = IRL;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -364,13 +364,14 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-IRL.release.xcconfig */;
+			baseConfigurationReference = 22EF160810C8FDB195316535 /* Pods-IRL.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W6LB434XQB;
 				INFOPLIST_FILE = IRL/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -381,7 +382,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.irl;
 				PRODUCT_NAME = IRL;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -457,10 +458,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
@@ -529,10 +527,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;

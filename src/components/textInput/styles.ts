@@ -1,5 +1,6 @@
 import { StyleSheet} from 'react-native';
 import colors from '../../utils/colors';
+import { deviceWidth } from '../../utils/helper';
 
 export default StyleSheet.create({
   inputView: {
@@ -7,5 +8,5 @@ export default StyleSheet.create({
     borderWidth: 1, color:colors.lightGray, flexDirection:'row', borderRadius:5,
     padding: 10, borderColor:colors.opaqueWhite, backgroundColor:colors.dullBlack
   },
-  input :{ color:colors.lightGray , height: 45,  width:"90%", fontSize:14 }
+  input :{ color:colors.lightGray , height: 45,  width:"90%", fontSize:14  }
 });
